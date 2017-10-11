@@ -3,8 +3,6 @@
 {{input type="text" value=keywords}}
 <button onclick={{action "searchForEvents"}}>Search</button>
 
-Event Count: {{events.length}}
-
 <ul>
   <li>
     {{#link-to "contact"}}
@@ -17,11 +15,5 @@ Event Count: {{events.length}}
     {{/link-to}}
   </li>
 </ul>
-
-{{#each events as |event|}}
-  <div class='event'>
-    <p>{{event.city_name}}, {{event.country_name}}</p>
-  </div>
-{{/each}}
 
 {{outlet}}

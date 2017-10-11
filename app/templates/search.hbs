@@ -1,0 +1,13 @@
+<p>
+  Event Count: {{model.length}}
+</p>
+
+{{!-- model is the array returned from search.js --}}
+
+{{#each model as |event|}}
+  <div class='event'>
+    <p>{{event.city_name}}, {{event.country_name}}</p>
+  </div>
+{{/each}}
+
+{{outlet}}
