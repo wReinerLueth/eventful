@@ -1,7 +1,9 @@
 <h1>Event Search</h1>
 
-{{input type="text" value=keywords}}
-<button onclick={{action "searchForEvents"}}>Search</button>
+<form onSubmit={{action "searchForEvents"}}>
+  {{input type="text" value=keywords}}
+  <button type="submit">Search</button>
+</form>
 
 <ul>
   <li>

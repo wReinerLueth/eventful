@@ -1,0 +1,18 @@
+<h4>
+  <a href={{model.url}} target="_blank">
+    {{model.city_name}}, {{model.country_name}}
+  </a>
+</h4>
+
+<button onclick={{action "favorite" model}}>
+  Favorite
+</button>
+
+<p>Starts at 
+  {{moment-format model.start_time "h:mm a"}} 
+  {{!-- on {{moment-format model.start_time "MM/DD/YYYY"}}  --}}
+  on {{format-date model.start_time}}
+  at {{model.venue_name}}
+</p>
+
+{{{model.description}}}

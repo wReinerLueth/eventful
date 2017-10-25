@@ -1,0 +1,5 @@
+{{#link-to "search.details" event.id}}
+      {{!-- {{moment-format event.start_time "MM/DD/YYYY"}} -  --}}
+      {{format-date event.start_time}} -
+      {{event.city_name}}, {{event.country_name}}
+{{/link-to}}

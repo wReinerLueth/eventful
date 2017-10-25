@@ -4,10 +4,9 @@
 
 {{!-- model is the array returned from search.js --}}
 
-{{#each model as |event|}}
-  <div class='event'>
-    <p>{{event.city_name}}, {{event.country_name}}</p>
-  </div>
+{{#each sortedEvents as |eventObj|}}
+  {{!-- <div class="events"> --}}
+    {{eventful-event class="events" event=eventObj}} {{!-- event in this case is the event in the component, eventObj is the object looped to --}}
+  {{!-- </div> --}}
 {{/each}}
-
 {{outlet}}
